@@ -33,6 +33,7 @@ inputGroup: {
   marginTop: 60,
   display: 'flex',
   justifyContent: 'space-around',
+  fontFamily: 'OpenSans',
 
 
 },

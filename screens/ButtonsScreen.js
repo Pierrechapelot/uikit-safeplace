@@ -9,12 +9,20 @@ import {
   KeyboardAvoidingView,
   Animated,
 } from "react-native";
-// import LinearGradient from 'react-native-linear-gradient'
-import { LinearGradient } from "expo-linear-gradient";
 
+import { LinearGradient } from "expo-linear-gradient";
+import { useFonts } from "@expo-google-fonts/inter";
 import React from "react";
+// import { GoogleSignin, GoogleSigninButton } from '@react-native-google-signin/google-signin';
 
 export default function ButtonsScreen() {
+  const [fontsLoaded] = useFonts({
+    OpenSans: require("../assets/OpenSans/OpenSans-Regular.ttf"),
+  });
+
+  if (!fontsLoaded) {
+    return <View />;
+  }
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.button1}>
@@ -35,23 +43,27 @@ export default function ButtonsScreen() {
       <TouchableOpacity style={styles.button6}>
         <Text style={styles.text6}>Button 6</Text>
       </TouchableOpacity>
-
-      <LinearGradient
-        // Background Linear Gradient
-        colors={["#E4513D", "#FFA647"]}
-        style={styles.SosButton}
-        start={{ x: 0, y: 0.5 }}
-        end={{ x: 1, y: 0.5 }}>
-        <Text style={styles.SosText}>SOS</Text>
+      <TouchableOpacity>
+        <LinearGradient
+          // Background Linear Gradient
+          colors={["#E4513D", "#FFA647"]}
+          style={styles.SosButton}
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 1, y: 0.5 }}
+        >
+          <Text style={styles.SosText}>SOS</Text>
         </LinearGradient>
+      </TouchableOpacity>
+
+
     </View>
   );
 }
-const AnimatedLinearGradient = Animated.createAnimatedComponent(LinearGradient);
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: "white",
+
 
     alignItems: "center",
   },
@@ -66,7 +78,7 @@ const styles = StyleSheet.create({
   },
   text1: {
     color: "#FFFFFF",
-    // fontFamily: ,
+    fontFamily: 'OpenSans',
     fontWeight: "bold",
     fontSize: 20,
   },
@@ -81,7 +93,7 @@ const styles = StyleSheet.create({
   },
   text2: {
     color: "#FFFFFF",
-    // fontFamily: ,
+    fontFamily: 'OpenSans',
     fontWeight: "bold",
     fontSize: 20,
   },
@@ -96,7 +108,7 @@ const styles = StyleSheet.create({
   },
   text3: {
     color: "#FFFFFF",
-    // fontFamily: ,
+    fontFamily: 'OpenSans',
     fontWeight: "bold",
     fontSize: 20,
   },
@@ -111,7 +123,7 @@ const styles = StyleSheet.create({
   },
   text4: {
     color: "#FFFFFF",
-    // fontFamily: ,
+    fontFamily: 'OpenSans',
     fontWeight: "bold",
     fontSize: 20,
   },
@@ -126,7 +138,7 @@ const styles = StyleSheet.create({
   },
   text5: {
     color: "#FFFFFF",
-    // fontFamily: ,
+    fontFamily: 'OpenSans',
     fontWeight: "bold",
     fontSize: 20,
   },
@@ -141,7 +153,7 @@ const styles = StyleSheet.create({
   },
   text6: {
     color: "#FFFFFF",
-    // fontFamily: ,
+    fontFamily: 'OpenSans',
     fontWeight: "bold",
     fontSize: 20,
   },
@@ -158,9 +170,10 @@ const styles = StyleSheet.create({
 
   },
   SosText: {
-    color: 'white',
-    fontWeight: 'bold',
+    color: "white",
+    fontWeight: "bold",
     fontSize: 64,
-    alignItems: 'center'
-  }
+    alignItems: "center",
+    fontFamily: 'OpenSans',
+  },
 });
