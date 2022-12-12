@@ -8,7 +8,7 @@ import {
   View,
   Image,
 } from "react-native";
-// import FontAwesome from "react-native-vector-icons/FontAwesome";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
 const PlaceholderImage = require("../assets/Vector.png");
 
 export default function CardsScreen() {
@@ -26,9 +26,10 @@ export default function CardsScreen() {
         </View>
 
         <View style={styles.rightContent}>
-          {/* <FontAwesome name={heart} size={12} color={red} /> */}
-          <Text style={styles.isFavorite}>Is Favorite</Text>
-          <Text style={styles.isConnected}>Is Connected</Text>
+        <FontAwesome name='heart' size={25} color='#ec6e5b' />
+
+          <FontAwesome name='circle' size={25} color='green' />
+
         </View>
       </TouchableOpacity>
     </View>
@@ -45,8 +46,11 @@ const styles = StyleSheet.create({
     marginTop: 70,
     width: "100%",
     height: 70,
-    backgroundColor: "red",
+    backgroundColor: "#E6EBE0",
     flexDirection: "row",
+  },
+  middleContent: {
+    marginLeft: 10,
   },
   leftContent: {
     flexDirection: "row",
