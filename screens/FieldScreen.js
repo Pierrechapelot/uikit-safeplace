@@ -17,6 +17,7 @@ export default function FieldScreen() {
         style={styles.input}
         placeholder="Du texte ici"
         placeholderTextColor='#C9D6DF'
+        autoCapitalize="none"
       />
       </View>
   </View>;
