@@ -26,10 +26,12 @@ export default function CardsScreen() {
         </View>
 
         <View style={styles.rightContent}>
-        <FontAwesome name='heart' size={25} color='#ec6e5b' />
-
-          <FontAwesome name='circle' size={25} color='green' />
-
+          <View style={styles.isFavorite}>
+            <FontAwesome name="heart" size={20} color="#ec6e5b" />
+          </View>
+          <View style={styles.isConnected}>
+            <FontAwesome name="circle" size={20} color="green" />
+          </View>
         </View>
       </TouchableOpacity>
     </View>
@@ -46,11 +48,12 @@ const styles = StyleSheet.create({
     marginTop: 70,
     width: "100%",
     height: 70,
-    backgroundColor: "#E6EBE0",
+    backgroundColor: "white",
     flexDirection: "row",
   },
   middleContent: {
-    marginLeft: 10,
+    marginLeft: 15,
+    color: '#33355C'
   },
   leftContent: {
     flexDirection: "row",
@@ -58,6 +61,9 @@ const styles = StyleSheet.create({
   },
   rightContent: {
     flexDirection: "row",
+    marginLeft: 160,
+    alignItems: 'center',
+    marginBottom: 20,
   },
   profilePic: {
     width: 40,
@@ -75,4 +81,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#33355C",
   },
+  isFavorite: {
+    marginRight: 20,
+  }
 });
