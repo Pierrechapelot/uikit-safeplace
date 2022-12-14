@@ -7,6 +7,7 @@ import ButtonsScreen from "./screens/ButtonsScreen";
 import FieldScreen from "./screens/FieldScreen";
 import SwitchesScreen from "./screens/SwitchesScreen";
 import CardsScreen from "./screens/CardsScreen";
+import CarouScreen from "./screens/CarouScreen";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import { useFonts } from "@expo-google-fonts/inter";
 
@@ -29,6 +30,8 @@ export default function App() {
         <Tab.Screen name="Cards" component={CardsScreen} />
 
         <Tab.Screen name="Switches" component={SwitchesScreen} />
+        <Tab.Screen name="Carou" component={CarouScreen} />
+
       </Tab.Navigator>
     </NavigationContainer>
   );
