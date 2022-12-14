@@ -15,13 +15,13 @@ const CarouselCardItem = ({ item, index }) => {
       <Text style={styles.body}>{item.body}</Text>
     </View>
   )
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
     borderRadius: 8,
-    width: ITEM_WIDTH,
+    width: 400,
     paddingBottom: 40,
     shadowColor: "#000",
     shadowOffset: {
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     elevation: 7,
   },
   image: {
-    width: ITEM_WIDTH,
+    width: 400,
     height: 300,
   },
   header: {
